@@ -11,7 +11,7 @@ public class CustomClassLoader extends ClassLoader
   public CustomClassLoader(ClassLoader loader) throws MalformedURLException
   {
     super(Thread.currentThread().getContextClassLoader());
-    URL[] urls = new URL[]{new File("/Users/saubhagya/Development/lib/lib2").toURI().toURL()};
+    URL[] urls = new URL[]{new File("/Users/saubhagya/Development/lib/lib2/loader.jar").toURI().toURL()};
     childClassLoader = new ChildClassLoader( urls, new DetectClass(this.getParent()) );
   }
   @Override
